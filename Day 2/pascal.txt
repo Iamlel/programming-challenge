@@ -24,6 +24,5 @@ def genPascal(num):
     print(pAppend)
         
 num = 6
-print('Test:\n')
 genPascal(num)
         
