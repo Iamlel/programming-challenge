@@ -92,19 +92,19 @@ public static class Program {
 		map[hunterCords[0], hunterCords[1]] = square;
 		
 		if (diffC[0] == max) {
-			hunterCords[0] += 1;
+			hunterCords[0]++;
 		} else if (diffC[1] == max) {
-			hunterCords[1] += 1;
+			hunterCords[1]++;
 		} else if (difC[0] == max) {
-			hunterCords[0] -= 1;
+			hunterCords[0]--;
 		} else {
-			hunterCords[1] -= 1;
+			hunterCords[1]--;
 		}
 		map[hunterCords[0], hunterCords[1]] = hunt;
 	}
 	
 	public static void hunterCheck() {
-		if (hunterCords[0] == snakeCords[0] || hunterCords[1] == snakeCords[1]) {
+		if (hunterCords[0] == snakeCords[0] && hunterCords[1] == snakeCords[1]) {
 			map[hunterCords[0], hunterCords[1]] = square;
 			map[snakeCords[0], snakeCords[1]] = square;
 			hunterCords[0] = 7;
