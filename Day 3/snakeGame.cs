@@ -62,23 +62,23 @@ public static class Program {
 		map[snakeCords[0], snakeCords[1]] = square;
 		if (userInput == "w") {
 			if (snakeCords[0] > 0) {
-				score += 1;
-				snakeCords[0] -= 1;
+				score++;
+				snakeCords[0]--;
 			} else {	score = 0; snakeCords[0] = 0; snakeCords[1] = 0;	}
 		} else if (userInput == "a") {
 			if (snakeCords[1] > 0) {
-				score += 1;
-				snakeCords[1] -= 1;
+				score++;
+				snakeCords[1]--;
 			} else {	score = 0; snakeCords[0] = 0; snakeCords[1] = 0;	}
 		} else if (userInput == "s") {
 			if (snakeCords[0] < 7) {
-				score += 1;
-				snakeCords[0] += 1;
+				score++;
+				snakeCords[0]++;
 			} else {	score = 0; snakeCords[0] = 0; snakeCords[1] = 0;	}
 		} else {
 			if (snakeCords[1] < 7) {
-				score += 1;
-				snakeCords[1] += 1;
+				score++;
+				snakeCords[1]++;
 			} else {	score = 0; snakeCords[0] = 0; snakeCords[1] = 0;	}
 		}
 		
