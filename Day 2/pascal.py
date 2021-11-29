@@ -15,7 +15,7 @@ def genPascal(num):
                     d = 1
                 else:
                     d = nom[cNum - 1] + nom[cNum - 2]
-                pAppend += str(1)
+                pAppend += str(d)
                 nom2.append(d)
             else:
                 pAppend += ' '
