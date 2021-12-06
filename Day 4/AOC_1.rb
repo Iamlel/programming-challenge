@@ -22,5 +22,3 @@ def partTwo()
   end
   puts tot
 end
-
-partTwo()
