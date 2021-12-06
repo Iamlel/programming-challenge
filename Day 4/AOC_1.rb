@@ -10,7 +10,7 @@ def partOne()
 end
 
 def partTwo()
-  file = File.read("puzzle2.txt").split
+  file = File.read("puzzle.txt").split
   tot = 0
   prev = file[0].to_i + file[1].to_i + file[2].to_i
   for x in 1..(file.length() - 1)
