@@ -23,4 +23,3 @@ defmodule partOne do
     end
   end
 end
-partOne.startup()
