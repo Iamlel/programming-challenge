@@ -1,4 +1,4 @@
-defmodule partOne do
+defmodule PartOne do
   def startup() do
     fish = String.split(File.read!("./puzzle.txt"), ",")
     fish = Enum.map(fish, &String.to_integer/1)
