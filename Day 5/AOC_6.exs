@@ -23,3 +23,31 @@ defmodule PartOne do
     end
   end
 end
+
+defmodule PartTwo do
+  def startup() do
+    fish = String.split(File.read!("./puzzle.txt"), ",")
+    fish = Enum.map(fish, &String.to_integer/1)
+    fish = Enum.frequencies(fish)
+    fish = (Map.merge(%{0 => 0, 1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0}, fish))
+
+    forloop(fish, 1000000)
+  end
+
+  def forloop(list, y) do
+    if y > 0 do
+      list = Map.replace(list, 7, elem(Map.fetch(list, 0), 1) + elem(Map.fetch(list, 7), 1))
+      list = for {k, v} <- list, into: %{} do
+        if (k == 0) do
+          {k + 8, v}
+        else
+          {k - 1, v}
+        end
+      end
+
+      forloop(list, y - 1)
+    else
+      IO.puts(Enum.sum(Map.values(list)))
+    end
+  end
+end
