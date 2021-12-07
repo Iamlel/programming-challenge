@@ -31,7 +31,7 @@ defmodule PartTwo do
     fish = Enum.frequencies(fish)
     fish = (Map.merge(%{0 => 0, 1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0}, fish))
 
-    forloop(fish, 1000000)
+    forloop(fish, 256)
   end
 
   def forloop(list, y) do
