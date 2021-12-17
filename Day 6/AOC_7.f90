@@ -23,7 +23,7 @@ module adventOfCode
 		
 		call sort(list)
 		
-		num2 = list(floor((num / 2 + 0.5)))
+		num2 = list(floor(num / 2 + 0.5))
 		total = 0
 		do i = 1, num
 			total = total + abs(list(i) - num2)
